@@ -1,0 +1,52 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+venv/
+env/
+*.egg-info/
+
+# Airflow-specific
+logs/
+*.db
+airflow.db
+unittests.cfg
+.venv/
+
+# Airflow config and secrets
+.env
+*.env
+config/
+
+# Airflow SQLite DB (if using local testing)
+airflow.sqlite
+
+# Docker
+*.pid
+*.pid.lock
+docker-compose.override.yml
+
+# DAG example backups
+dags/__pycache__/
+
+# Jupyter notebooks (if any)
+.ipynb_checkpoints
+
+# macOS system files
+.DS_Store
+
+# IntelliJ / PyCharm IDE files
+.idea/
+*.iml
+
+# VSCode (if you use it sometimes)
+.vscode/
+
+# System files
+Thumbs.db
+ehthumbs.db
+desktop.ini
