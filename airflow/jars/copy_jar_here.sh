@@ -1,0 +1,1 @@
+cp 'C:\Users\Rakesh_Yadav\IdeaProjects\etlScalaSpark2024\target\scala-2.13\SparkWithScalaLearn2024-assembly-0.1.0-SNAPSHOT.jar' /c/Users/Rakesh_Yadav/IdeaProjects/ApacheAirflow/airflow/jars/

@@ -10,4 +10,13 @@
 # Dependency resolve
 - install python which support airflow (3.9.x)
 - install airflow using pip along with python constraints
-    -  pip install "apache-airflow==2.8.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-3.9.txt"
+    - pip install "apache-airflow==2.8.1" --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-3.9.txt"
+    - pip install -r requirements.txt \
+      --constraint "https://raw.githubusercontent.com/apache/airflow/constraints-2.8.1/constraints-3.9.txt"
+- docker exec -it 661386fad7d5 bash
+
+# run spark in docker container while spark submit
+- docker build -t spark-image .
+# delete docker image
+- docker images
+- docker rmi <image_name_or_id>
