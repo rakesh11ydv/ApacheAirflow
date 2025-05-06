@@ -1,16 +1,19 @@
 from airflow import DAG
-from airflow.operators.python_operator import PythonOperator
+from airflow.operators.python import PythonOperator
 from datetime import datetime, timedelta
 import time
+
 
 # Define a Python function to be run by the task
 def print_hello():
     print(f"Hello! The current date and time is: {datetime.now()}")
 
+
 def sleep_task():
     print(f"Sleeping for 10 seconds...")
     time.sleep(10)
     print(f"Awoke from sleep at {datetime.now()}")
+
 
 # Default arguments for the DAG
 default_args = {
@@ -21,7 +24,7 @@ default_args = {
 
 # Define the DAG
 dag = DAG(
-        'simple_test_dag',
+    'simple_test_dag',
     default_args=default_args,
     description='A simple test DAG',
     schedule_interval='@daily',  # This will run once a day
