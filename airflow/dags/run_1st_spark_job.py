@@ -19,12 +19,12 @@ dag = DAG(
 )
 
 spark_submit_command = """
-spark-submit --class dataframe_op.ProductSalesAnalysis --master local[*] /opt/spark/app/SparkWithScalaLearn2024-assembly-0.1.0-SNAPSHOT.jar
+spark-submit --class dataframe_op.ProductSalesAnalysis --master local[*] /opt/airflow/jars/SparkWithScalaLearn2024-assembly-0.1.0-SNAPSHOT.jar
 """
 
 run_spark_job = DockerOperator(
     task_id='run_spark_job',
-    image='spark-image',  # The image you built or pulled
+    image='spark-image:3.5.4',  # The image you built or pulled
     command=spark_submit_command,
     dag=dag,
     auto_remove=True,
