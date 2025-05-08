@@ -1,0 +1,1 @@
+echo "Hello from Intellij, Airflow at $(date)"
